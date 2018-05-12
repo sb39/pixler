@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
+   
+<!-- html head-->
+     <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./designs.js"></script>
+    
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/4.13.0/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -31,6 +38,27 @@
     </style>
   </head>
   <body>
-   <h1>Travis Bot working success !</h1>
+  <h1>Lab: Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="1" value="1" required>
+        Grid Width:
+        <input type="number" id="inputWeight" name="width" min="1" value="1" required>
+        <input type="submit" id="submitButton">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+    <h2>Functions</h2>
+    <input type="submit" id="emptyTable" value="Remove Table">
+    <input type ="submit" id="emptycolor" value="Remove Color">
+    <input type ="submit" id="rstcolor" value="Reset Colorpicker">
+    <p id="desc">*you can double click on cell to remove color</p>
+    <h2>Design Canvas</h2>
+    <table id="pixelCanvas"></table>
+
+    <script src="designs.js"></script>
   </body>
 </html>
